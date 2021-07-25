@@ -1,0 +1,30 @@
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.transaction_history {
+  width: 550px;
+  padding: 10px;
+
+  -webkit-box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+th {
+  padding: 10px;
+  background-color: rgb(18, 109, 170);
+  color: white;
+}
+td {
+  padding: 10px;
+  color: rgb(47, 79, 167);
+}
+tr {
+  background-color: white;
+}
+tr:nth-child(2n) {
+  background-color: rgb(144, 181, 204);
+}

@@ -1,5 +1,5 @@
 import './App.css';
-import FriendList from './components/FriendList/FriendList.js';
+import FriendsList from './components/FriendsList/FriendsList.js';
 import Profile from './components/Profile/Profile';
 import Statistics from './components/Statistics/Statistics';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
@@ -23,7 +23,7 @@ function App() {
 
       <Statistics title="Upload stats" userStats={userStats} />
 
-      <FriendList friends={friends} />
+      <FriendsList friends={friends} />
 
       <TransactionHistory items={transactions} />
     </div>

@@ -1,32 +1,28 @@
+import FriendsListItem from './FriendsListItem/FriendsListItem';
 import PropTypes from 'prop-types';
 import defaultImage from '../../images/default.jpg';
 import styles from './FriendsList.module.css';
 
-const Friends = ({ friends }) => (
+const FriendsList = ({ friends }) => (
   <div className={styles.container}>
     <ul className={styles.friend_list}>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li key={id} className={styles.item}>
-          {isOnline && <span className={styles.online}>.....</span>}
-          {!isOnline && <span className={styles.offline}>.....</span>}
-          <img
-            className={styles.avatar}
-            src={avatar}
-            alt={'Image of' + { name }}
-            width="48"
-          />
-          <p className={styles.name}>{name}</p>
-        </li>
+        <FriendsListItem
+          avatar={avatar}
+          name={name}
+          id={id}
+          isOnLine={isOnline}
+        />
       ))}
     </ul>
   </div>
 );
 
-Friends.defaultProps = {
+FriendsList.defaultProps = {
   avatar: defaultImage,
 };
-
-Friends.propTypes = {
+//kglgggiu
+FriendsList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string,
@@ -37,4 +33,4 @@ Friends.propTypes = {
   ),
 };
 
-export default Friends;
+export default FriendsList;

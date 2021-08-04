@@ -10,7 +10,7 @@ const FriendsList = ({ friends }) => (
         <FriendsListItem
           avatar={avatar}
           name={name}
-          id={id}
+          key={id}
           isOnLine={isOnline}
         />
       ))}
